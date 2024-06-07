@@ -55,10 +55,6 @@ def visualize_sales_by_category(sales_per_category_month):
 
     fig.show()
 
-def save_sales_data(sales_per_category_month, filename='sales_per_category_month.csv'):
-    sales_per_category_month.to_csv(filename, index=False)
-    print(f"Data saved to {filename}")
-
 def main():
     orders_df, order_details_df, products_df, categories_df = load_data()
     sales_per_category_month = process_data(orders_df, order_details_df, products_df, categories_df)
@@ -67,7 +63,6 @@ def main():
     print(sales_per_category_month)
     
     visualize_sales_by_category(sales_per_category_month)
-    save_sales_data(sales_per_category_month)
 
 if __name__ == "__main__":
     main()

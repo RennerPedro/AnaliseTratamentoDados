@@ -1,72 +1,71 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+import plotly.express as px
 
 # Carregar os dados dos arquivos CSV
-combined_df = pd.read_csv('combined_df.csv')
-first_purchase = pd.read_csv('first_purchase.csv')
-last_purchase = pd.read_csv('last_purchase.csv')
-purchase_count = pd.read_csv('purchase_count.csv')
+combined_df = pd.read_csv('planilhas/combined_df.csv')
+purchase_count = pd.read_csv('planilhas/purchase_count.csv')
 
-# Visualizar os dados de combined_df
-print("Visualizando dados de combined_df:")
-print(combined_df)
-print()
+# Converter as colunas de data para datetime
+combined_df['first_order_date'] = pd.to_datetime(combined_df['first_order_date'])
+combined_df['last_order_date'] = pd.to_datetime(combined_df['last_order_date'])
 
-# Visualizar os dados de first_purchase
-print("Visualizando dados de first_purchase:")
-print(first_purchase)
-print()
+# Extrair o mês de cada data
+combined_df['first_order_month'] = combined_df['first_order_date'].dt.to_period('M').dt.to_timestamp()
+combined_df['last_order_month'] = combined_df['last_order_date'].dt.to_period('M').dt.to_timestamp()
 
-# Visualizar os dados de last_purchase
-print("Visualizando dados de last_purchase:")
-print(last_purchase)
-print()
+# Contagem de clientes por mês de primeira e última compra
+first_order_counts = combined_df.groupby('first_order_month')['customer_id'].count().reset_index()
+first_order_counts.columns = ['month', 'first_orders']
 
-# Visualizar os dados de purchase_count
-print("Visualizando dados de purchase_count:")
-print(purchase_count)
-print()
+last_order_counts = combined_df.groupby('last_order_month')['customer_id'].count().reset_index()
+last_order_counts.columns = ['month', 'last_orders']
 
-# Plotar gráfico para combined_df
-plt.figure(figsize=(10, 6))
-plt.plot(combined_df['customer_id'], combined_df['first_order_date'], label='First Purchase')
-plt.plot(combined_df['customer_id'], combined_df['last_order_date'], label='Last Purchase')
-plt.xlabel('Customer ID')
-plt.ylabel('Order Date')
-plt.title('First and Last Purchase Dates by Customer')
-plt.xticks(rotation=45)
-plt.legend()
-plt.tight_layout()
-plt.show()
+# Combinar as contagens em um único DataFrame
+order_counts = pd.merge(first_order_counts, last_order_counts, on='month', how='outer').fillna(0)
 
-# Plotar gráfico para first_purchase
-plt.figure(figsize=(10, 6))
-plt.plot(first_purchase['customer_id'], first_purchase['first_order_date'], label='First Purchase')
-plt.xlabel('Customer ID')
-plt.ylabel('Order Date')
-plt.title('First Purchase Date by Customer')
-plt.xticks(rotation=45)
-plt.legend()
-plt.tight_layout()
-plt.show()
+# Plotar gráfico de áreas empilhadas para combined_df com meses no eixo y
+fig = px.area(order_counts, y='month', x=['first_orders', 'last_orders'],
+              labels={'value': 'Number of Orders', 'month': 'Month', 'variable': 'Order Type'},
+              title='First and Last Purchase Dates by Customer',
+              template='plotly_dark',
+              color_discrete_sequence=['#1f77b4', '#ff7f0e'],
+              width=800, height=500)
 
-# Plotar gráfico para last_purchase
-plt.figure(figsize=(10, 6))
-plt.plot(last_purchase['customer_id'], last_purchase['last_order_date'], label='Last Purchase')
-plt.xlabel('Customer ID')
-plt.ylabel('Order Date')
-plt.title('Last Purchase Date by Customer')
-plt.xticks(rotation=45)
-plt.legend()
-plt.tight_layout()
-plt.show()
+fig.update_layout(
+    font=dict(family="Arial, sans-serif", size=12, color="white"),
+    title_font=dict(size=18),
+    yaxis_title_font=dict(size=14),
+    xaxis_title_font=dict(size=14),
+    legend_title_font=dict(size=14),
+    legend_font=dict(size=12),
+    yaxis_tickangle=-45,
+    margin=dict(l=80, r=80, t=80, b=80),
+    plot_bgcolor='#23272c',
+    paper_bgcolor='#23272c'
+)
+
+fig.show()
 
 # Plotar gráfico para purchase_count
-plt.figure(figsize=(10, 6))
-plt.bar(purchase_count['employee_name'], purchase_count['first/last_ratio'])
-plt.xlabel('Employee Name')
-plt.ylabel('First/Last Purchase Ratio')
-plt.title('First/Last Purchase Ratio by Employee')
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
+fig = px.bar(purchase_count, x='employee_name', y='first/last_ratio',
+             labels={'first/last_ratio': 'First/Last Purchase Ratio'},
+             title='First/Last Purchase Ratio by Employee',
+             template='plotly_dark',
+             color='employee_name',
+             color_continuous_scale=px.colors.qualitative.Pastel,
+             width=800, height=500)
+
+fig.update_layout(
+    font=dict(family="Arial, sans-serif", size=12, color="white"),
+    title_font=dict(size=18),
+    xaxis_title_font=dict(size=14),
+    yaxis_title_font=dict(size=14),
+    legend_title_font=dict(size=14),
+    legend_font=dict(size=12),
+    xaxis_tickangle=-45,
+    margin=dict(l=80, r=80, t=80, b=80),
+    plot_bgcolor='#23272c',
+    paper_bgcolor='#23272c'
+)
+
+fig.show()

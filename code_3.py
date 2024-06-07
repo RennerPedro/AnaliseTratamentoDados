@@ -1,10 +1,10 @@
 import pandas as pd
 
 # Carregar os dados dos arquivos CSV
-orders_df = pd.read_csv('orders.csv')
-employees_df = pd.read_csv('employees.csv', sep=';')
-customers_df = pd.read_csv('customers.csv', sep=';')
-order_details_df = pd.read_csv('order_details.csv')
+orders_df = pd.read_csv('planilhas/orders.csv')
+employees_df = pd.read_csv('planilhas/employees.csv', sep=';')
+customers_df = pd.read_csv('planilhas/customers.csv', sep=';')
+order_details_df = pd.read_csv('planilhas/order_details.csv')
 
 # Converter colunas de data para datetime
 orders_df['order_date'] = pd.to_datetime(orders_df['order_date'])

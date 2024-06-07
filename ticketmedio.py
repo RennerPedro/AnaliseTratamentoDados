@@ -30,9 +30,9 @@ order_details = None
 
 for delimiter in delimiters:
     if orders is None:
-        orders = read_csv_safely('orders.csv', delimiter, expected_columns_orders)
+        orders = read_csv_safely('planilhas/orders.csv', delimiter, expected_columns_orders)
     if order_details is None:
-        order_details = read_csv_safely('order_details.csv', delimiter, expected_columns_order_details)
+        order_details = read_csv_safely('planilhas/order_details.csv', delimiter, expected_columns_order_details)
 
 # Verificar se ambos os DataFrames foram carregados corretamente
 if orders is not None and order_details is not None:

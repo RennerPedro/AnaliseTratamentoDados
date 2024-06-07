@@ -1,0 +1,10 @@
+employee_id,employee_name,first_purchase_count,last_purchase_count,first/last_ratio
+5,Steven,6,2,3.0
+6,Michael,9,5,1.8
+4,Margaret,19,13,1.46
+8,Laura,14,12,1.166
+7,Robert,8,8,1.0
+9,Anne,4,4,1.0
+3,Janet,11,14,0.78
+1,Nancy,11,15,0.73
+2,Andrew,7,16,0.43

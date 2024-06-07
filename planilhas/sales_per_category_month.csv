@@ -1,0 +1,185 @@
+category_name,year_month,quantity
+Beverages,1996-07,272
+Beverages,1996-08,347
+Beverages,1996-09,285
+Beverages,1996-10,301
+Beverages,1996-11,332
+Beverages,1996-12,305
+Beverages,1997-01,330
+Beverages,1997-02,220
+Beverages,1997-03,471
+Beverages,1997-04,268
+Beverages,1997-05,322
+Beverages,1997-06,313
+Beverages,1997-07,327
+Beverages,1997-08,334
+Beverages,1997-09,174
+Beverages,1997-10,491
+Beverages,1997-11,248
+Beverages,1997-12,498
+Beverages,1998-01,622
+Beverages,1998-02,834
+Beverages,1998-03,925
+Beverages,1998-04,1092
+Beverages,1998-05,221
+Condiments,1996-07,139
+Condiments,1996-08,154
+Condiments,1996-09,110
+Condiments,1996-10,183
+Condiments,1996-11,294
+Condiments,1996-12,82
+Condiments,1997-01,271
+Condiments,1997-02,393
+Condiments,1997-03,150
+Condiments,1997-04,259
+Condiments,1997-05,300
+Condiments,1997-06,95
+Condiments,1997-07,300
+Condiments,1997-08,206
+Condiments,1997-09,222
+Condiments,1997-10,270
+Condiments,1997-11,172
+Condiments,1997-12,257
+Condiments,1998-01,269
+Condiments,1998-02,289
+Condiments,1998-03,378
+Condiments,1998-04,446
+Condiments,1998-05,59
+Confections,1996-07,245
+Confections,1996-08,170
+Confections,1996-09,248
+Confections,1996-10,187
+Confections,1996-11,267
+Confections,1996-12,240
+Confections,1997-01,623
+Confections,1997-02,425
+Confections,1997-03,265
+Confections,1997-04,394
+Confections,1997-05,291
+Confections,1997-06,107
+Confections,1997-07,210
+Confections,1997-08,335
+Confections,1997-09,371
+Confections,1997-10,390
+Confections,1997-11,255
+Confections,1997-12,471
+Confections,1998-01,483
+Confections,1998-02,432
+Confections,1998-03,880
+Confections,1998-04,438
+Confections,1998-05,179
+Dairy Products,1996-07,304
+Dairy Products,1996-08,250
+Dairy Products,1996-09,140
+Dairy Products,1996-10,367
+Dairy Products,1996-11,372
+Dairy Products,1996-12,653
+Dairy Products,1997-01,448
+Dairy Products,1997-02,248
+Dairy Products,1997-03,311
+Dairy Products,1997-04,231
+Dairy Products,1997-05,494
+Dairy Products,1997-06,405
+Dairy Products,1997-07,374
+Dairy Products,1997-08,256
+Dairy Products,1997-09,435
+Dairy Products,1997-10,422
+Dairy Products,1997-11,344
+Dairy Products,1997-12,406
+Dairy Products,1998-01,622
+Dairy Products,1998-02,446
+Dairy Products,1998-03,581
+Dairy Products,1998-04,1005
+Dairy Products,1998-05,35
+Grains/Cereals,1996-07,83
+Grains/Cereals,1996-08,11
+Grains/Cereals,1996-09,32
+Grains/Cereals,1996-10,156
+Grains/Cereals,1996-11,139
+Grains/Cereals,1996-12,128
+Grains/Cereals,1997-01,232
+Grains/Cereals,1997-02,216
+Grains/Cereals,1997-03,174
+Grains/Cereals,1997-04,240
+Grains/Cereals,1997-05,149
+Grains/Cereals,1997-06,292
+Grains/Cereals,1997-07,243
+Grains/Cereals,1997-08,204
+Grains/Cereals,1997-09,262
+Grains/Cereals,1997-10,112
+Grains/Cereals,1997-11,310
+Grains/Cereals,1997-12,202
+Grains/Cereals,1998-01,544
+Grains/Cereals,1998-02,211
+Grains/Cereals,1998-03,189
+Grains/Cereals,1998-04,297
+Grains/Cereals,1998-05,136
+Meat/Poultry,1996-07,76
+Meat/Poultry,1996-08,111
+Meat/Poultry,1996-09,100
+Meat/Poultry,1996-10,153
+Meat/Poultry,1996-11,201
+Meat/Poultry,1996-12,309
+Meat/Poultry,1997-01,219
+Meat/Poultry,1997-02,380
+Meat/Poultry,1997-03,102
+Meat/Poultry,1997-04,93
+Meat/Poultry,1997-05,136
+Meat/Poultry,1997-06,130
+Meat/Poultry,1997-07,179
+Meat/Poultry,1997-08,105
+Meat/Poultry,1997-09,176
+Meat/Poultry,1997-10,378
+Meat/Poultry,1997-11,32
+Meat/Poultry,1997-12,259
+Meat/Poultry,1998-01,133
+Meat/Poultry,1998-02,302
+Meat/Poultry,1998-03,92
+Meat/Poultry,1998-04,405
+Meat/Poultry,1998-05,128
+Produce,1996-07,156
+Produce,1996-08,22
+Produce,1996-09,32
+Produce,1996-10,81
+Produce,1996-11,63
+Produce,1996-12,195
+Produce,1997-01,124
+Produce,1997-02,103
+Produce,1997-03,122
+Produce,1997-04,186
+Produce,1997-05,71
+Produce,1997-06,149
+Produce,1997-07,55
+Produce,1997-08,119
+Produce,1997-09,73
+Produce,1997-10,185
+Produce,1997-11,81
+Produce,1997-12,315
+Produce,1998-01,58
+Produce,1998-02,37
+Produce,1998-03,351
+Produce,1998-04,367
+Produce,1998-05,45
+Seafood,1996-07,187
+Seafood,1996-08,257
+Seafood,1996-09,177
+Seafood,1996-10,310
+Seafood,1996-11,67
+Seafood,1996-12,288
+Seafood,1997-01,154
+Seafood,1997-02,147
+Seafood,1997-03,175
+Seafood,1997-04,241
+Seafood,1997-05,401
+Seafood,1997-06,144
+Seafood,1997-07,366
+Seafood,1997-08,302
+Seafood,1997-09,630
+Seafood,1997-10,431
+Seafood,1997-11,414
+Seafood,1997-12,274
+Seafood,1998-01,735
+Seafood,1998-02,564
+Seafood,1998-03,669
+Seafood,1998-04,630
+Seafood,1998-05,118
