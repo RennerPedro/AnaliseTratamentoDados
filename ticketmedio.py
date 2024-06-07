@@ -69,7 +69,7 @@ if orders is not None and order_details is not None:
     monthly_data['average_ticket'] = monthly_data['total_sales'] / monthly_data['num_orders']
 
     # Exportar os resultados para um novo CSV
-    monthly_data.to_csv('monthly_average_ticket.csv', index=False)
+    #monthly_data.to_csv('monthly_average_ticket.csv', index=False)
 
     print(monthly_data)
 else:

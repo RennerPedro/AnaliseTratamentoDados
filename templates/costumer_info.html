@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Cliente</title>
+</head>
+<body>
+    <h1>Informações do Cliente</h1>
+    <p>{{ message }}</p>
+    {% if message != "Cliente não encontrado." %}
+        <img src="data:image/png;base64,{{ graph }}" alt="Gráfico de Datas de Compra">
+    {% endif %}
+</body>
+</html>
