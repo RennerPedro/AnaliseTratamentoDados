@@ -1,0 +1,11 @@
+customer_id,company_name,contact_name,contact_title,address,city,region,postal_code,country,phone,fax
+ALFKI,Alfreds Futterkiste,Maria Anders,Sales Representative,Obere Str. 57,Berlin,,12209,Germany,030-0074321,030-0076545
+FRANR,France restauration,Carine Schmitt,Marketing Manager,"54, rue Royale",Nantes,,44000,France,40.32.21.21,40.32.21.20
+GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,2732 Baker Blvd.,Eugene,OR,97403,USA,(503) 555-7555,
+LACOR,La corne d'abondance,Daniel Tonini,Sales Representative,"67, avenue de l'Europe",Versailles,,78000,France,30.59.84.10,30.59.85.11
+LETSS,Let's Stop N Shop,Jaime Yorres,Owner,87 Polk St. Suite 5,San Francisco,CA,94117,USA,(415) 555-5938,
+MAISD,Maison Dewey,Catherine Dewey,Sales Agent,Rue Joseph-Bens 532,Bruxelles,,B-1180,Belgium,(02) 201 24 67,(02) 201 24 68
+SPECD,Spécialités du monde,Dominique Perrier,Marketing Manager,"25, rue Lauriston",Paris,,75016,France,(1) 47.55.60.10,(1) 47.55.60.20
+THECR,The Cracker Box,Liu Wong,Marketing Assistant,55 Grizzly Peak Rd.,Butte,MT,59801,USA,(406) 555-5834,(406) 555-8083
+TRAIH,Trail's Head Gourmet Provisioners,Helvetius Nagy,Sales Associate,722 DaVinci Blvd.,Kirkland,WA,98034,USA,(206) 555-8257,(206) 555-2174
+WILMK,Wilman Kala,Matti Karttunen,Owner/Marketing Assistant,Keskuskatu 45,Helsinki,,21240,Finland,90-224 8858,90-224 8858

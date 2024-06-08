@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Carregar os dados dos arquivos CSV
-first_purchase = pd.read_csv('first_purchase.csv')
-last_purchase = pd.read_csv('last_purchase.csv')
+first_purchase = pd.read_csv('planilhas/first_purchase.csv')
+last_purchase = pd.read_csv('planilhas/last_purchase.csv')
 
 # Plotar gráfico de barras para as datas de primeira compra
 plt.figure(figsize=(10, 6))
