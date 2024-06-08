@@ -34,9 +34,9 @@ def visualize_sales_by_category(sales_per_category_month):
     )
 
     fig.update_layout(
-        xaxis_title='Year-Month',
-        yaxis_title='Quantity Sold',
-        legend_title='Category',
+        xaxis_title='Mês',
+        yaxis_title='Unidades vendidas',
+        legend_title='Categoria',
         template='plotly_white',
         hovermode='x unified',
         xaxis=dict(

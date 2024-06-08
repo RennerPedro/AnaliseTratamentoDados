@@ -1,4 +1,5 @@
 import pandas as pd
+import plotly.express as px
 
 # Carregar os dados dos arquivos CSV
 orders_df = pd.read_csv('planilhas/orders.csv')
@@ -67,3 +68,44 @@ purchase_count = purchase_count.sort_values(by='first/last_ratio', ascending=Fal
 # Exibir a tabela com a porcentagem de primeiras/últimas compras por vendedor
 print("First/Last Purchase Ratio by Employee:")
 print(purchase_count)
+
+# Função para calcular o número total de vendas de cada funcionário
+def calcular_total_vendas(order_details_df, orders_df, employees_df):
+    # Contar o número total de pedidos por funcionário
+    total_vendas_por_funcionario = orders_df['employee_id'].value_counts().reset_index()
+    total_vendas_por_funcionario.columns = ['employee_id', 'total_sales']
+    
+    # Combinar com os nomes dos funcionários
+    total_vendas_por_funcionario = pd.merge(total_vendas_por_funcionario, employees_df[['employee_id', 'first_name']], on='employee_id')
+    
+    return total_vendas_por_funcionario
+
+# Calcular o número total de vendas por funcionário
+total_vendas_por_funcionario = calcular_total_vendas(order_details_df, orders_df, employees_df)
+
+# Exibir o número total de vendas por funcionário
+print("Número Total de Vendas por Funcionário:")
+print(total_vendas_por_funcionario)
+
+total_vendas_por_funcionario.to_csv('planilhas/vendasfuncionario.csv', index=False)
+
+
+# Criar um gráfico de barras do número total de vendas por funcionário
+fig = px.bar(total_vendas_por_funcionario, x='first_name', y='total_sales',
+             title='Número Total de Vendas por Funcionário', labels={'first_name': 'Funcionário', 'total_sales': 'Total de Vendas'},
+             color='total_sales', color_continuous_scale=px.colors.sequential.Plasma)
+
+# Atualizações adicionais para tornar o gráfico mais bonito
+fig.update_layout(
+    title_font_size=24,
+    title_font_family='Arial',
+    title_font_color='Black',
+    xaxis_title='Funcionário',
+    yaxis_title='Total de Vendas',
+    coloraxis_colorbar_title='Total de Vendas',
+    coloraxis_colorbar_thickness=20,
+    coloraxis_colorbar_tickfont=dict(size=12),
+    coloraxis_colorbar_title_font=dict(size=16)
+)
+
+fig.show()
